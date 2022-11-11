@@ -1,7 +1,7 @@
 % !TEX encoding = UTF-8 Unicode
 
 \documentclass[a4paper]{article}
-
+\usepackage{subfigure}
 \usepackage{color}
 \usepackage{url}
 \usepackage[T2A]{fontenc} % enable Cyrillic fonts
@@ -21,8 +21,8 @@
 
 \title{Rubikova kocka\\ \small{Seminarski rad u okviru kursa\\Tehničko i naučno pisanje\\ Matematički fakultet}}
 
-\author{Ime i prezime autora\\ kontakt email adresa autora}
-\date{24.~oktobar 2017.}
+\author{Jovana Brkljač\\ bjovana314@gmail.com \and Mateja Janić\\ janic.mateja@gmail.com \and Bogdan Pejčić \\ bogdan.pejcic@gmail.com \and Mitar Avramović \\ 59.16.16.10.ma@gmail.com}
+\date{15.~novembar 2022.}
 \maketitle
 
 \abstract{
@@ -97,26 +97,34 @@ U odeljku \ref{sec:naslov1} precizirani su osnovni pojmovi, dok su zaključci da
 
 
 
-\section{Slike i tabele}
-\label{slike_i_tabele}
+\section{Permutacije}
+\label{permutacije}
 
-Slike i tabele treba da budu u svom okruženju, sa odgovarajućim naslovima, obeležene labelom da koje omogućava referenciranje. 
+Permutacije i orijentacije kockica su osobine koje određuju poziciju kockica, odnosno i samo stanje cele kocke.
+Posmatrajmo sada ivice kocke i, konkretno, fiksirajmo jednu od njih (slika \ref{fig:ivica-pomeranje}). Kojim god pomerajem da promenimo mesto te ivice, ona će i dalje ostati ivica, ondosno, ivica pomeranjem ne može preći u neku drugu vrstu kockica, na primer u ćoškove, a isto važi i obrnuto, odnosno da nijedan ćošak pomerajem ne može postati ivica.
+-
+\begin{figure}[h]
+        \centering
+        \subfigure{
+             \includegraphics[height=2cm]{images/slozena-ivica.png}
+        }
+        \subfigure{
+            \includegraphics[height=1.5cm]{images/Uarrow.png} 
+        }
+        \subfigure{
+             \includegraphics[height=2cm]{images/U-ivica.png}
+        }
+        \subfigure{
+            \includegraphics[height=1.5cm]{images/Farrow.png} 
+        }
+        \subfigure{
+             \includegraphics[height=2cm]{images/F-ivica.png}
+        }
+        \caption{}
+        \label{fig:ivica-pomeranje}
+    \end{figure}
 
-\begin{primer} Ovako se ubacuje slika. Obratiti pažnju da je dodato i 
-\begin{verbatim}
-\usepackage{graphicx}
-\end{verbatim}
-
-\begin{figure}[h!]
-\begin{center}
-\includegraphics[scale=0.75]{pande.jpg}
-\end{center}
-\caption{Pande}
-\label{fig:pande}
-\end{figure}
-
-Na svaku sliku neophodno je referisati se negde u tekstu. Na primer, na slici \ref{fig:pande} prikazane su pande. 
-\end{primer}
+Zato ivice imaju samo 12 mesta na kojima se mogu naći i jedno stanje kocke može imati samo jednu permutaciju tih ivica. S obzirom da se ivice i ćoškovi razlikuju i njihove permutacije se gledaju odvojeno jedne od drugih.
 
 \begin{primer} I tabele treba da budu u svom okruženju, i na njih je neophodno referisati se u tekstu. Na primer, u tabeli \ref{tab:tabela1} su prikazana različita poravnanja u tabelama.
 
@@ -138,98 +146,6 @@ d &e&f\\ \hline
 
 
 
-\section{Prvi naslov}
-\label{sec:naslov1}
-
-
-Ovde pišem tekst. 
-Ovde pišem tekst. 
-Ovde pišem tekst. 
-Ovde pišem tekst. 
-Ovde pišem tekst. 
-Ovde pišem tekst. 
-Ovde pišem tekst. 
-Ovde pišem tekst. 
-
-
-\subsection{Prvi podnaslov}
-\label{subsec:podnaslov1}
-
-Ovde pišem tekst. 
-Ovde pišem tekst. 
-Ovde pišem tekst. 
-Ovde pišem tekst. 
-Ovde pišem tekst. 
-Ovde pišem tekst. 
-Ovde pišem tekst. 
-
-\subsection{Drugi podnaslov}
-\label{subsec:podnaslov2}
-
-Ovde pišem tekst. 
-Ovde pišem tekst. 
-Ovde pišem tekst. 
-Ovde pišem tekst. 
-Ovde pišem tekst. 
-Ovde pišem tekst. 
-
-\section{Drugi naslov}
-\label{sec:naslov2}
-
-Ovde pišem tekst. 
-Ovde pišem tekst. 
-Ovde pišem tekst. 
-Ovde pišem tekst. 
-
-\subsection{... podnaslov}
-\label{subsec:podnaslovN}
-
-Ovde pišem tekst. 
-Ovde pišem tekst. 
-Ovde pišem tekst. 
-Ovde pišem tekst. 
-Ovde pišem tekst. 
-Ovde pišem tekst. 
-
-\section{n-ti naslov}
-\label{sec:naslovN}
-
-Ovde pišem tekst. 
-Ovde pišem tekst. 
-Ovde pišem tekst. 
-Ovde pišem tekst. 
-Ovde pišem tekst. 
-
-\subsection{... podnaslov}
-\label{subsec:podnaslovK}
-
-Ovde pišem tekst. 
-Ovde pišem tekst. 
-Ovde pišem tekst. 
-Ovde pišem tekst. 
-Ovde pišem tekst. 
-
-\subsection{... podnaslov}
-\label{subsec:podnaslovM}
-
-Ovde pišem tekst. 
-Ovde pišem tekst. 
-Ovde pišem tekst. 
-Ovde pišem tekst. 
-Ovde pišem tekst. 
-
-\section{Poslednji naslov}
-\label{sec:naslovM}
-
-Ovde pišem tekst. 
-Ovde pišem tekst. 
-Ovde pišem tekst. 
-Ovde pišem tekst. 
-Ovde pišem tekst. 
-Ovde pišem tekst. 
-Ovde pišem tekst. 
-Ovde pišem tekst. 
-Ovde pišem tekst. 
 
 \section{Zaključak}
 \label{sec:zakljucak}
