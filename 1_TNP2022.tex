@@ -3,6 +3,7 @@
 \documentclass[a4paper]{article}
 \usepackage{subfigure}
 \usepackage{wrapfig}
+\usepackage{caption}
 \usepackage{color}
 \usepackage{url}
 \usepackage[T2A]{fontenc} % enable Cyrillic fonts
@@ -138,6 +139,39 @@ Posmatrajmo sada ivice kocke i, konkretno, fiksirajmo jednu od njih (slika \ref{
     \end{figure}
 
 Zato ivice imaju samo 12 mesta na kojima se mogu naći i jedno stanje kocke može imati samo jednu permutaciju tih ivica. S obzirom da se ivice i ćoškovi razlikuju i njihove permutacije se gledaju odvojeno jedne od drugih.
+
+Ivice kocke se obeležavaju sa XY, gde su X i Y strane koje tu ivicu dele u složenoj kocki. Na primer, ivicu UR u složenoj kocki dele gornja (U) i desna (R) strana. Upravo zbog tog poređenja sa složenom kockom, ivica XY će uvek ostati XY, odnosno njena oznaka se potezima neće promeniti, na kojem god ona mestu završila.
+
+Analogno ivicama, ćoškovi se obeležavaju sa XYZ, gde su X,Y i Z strane koje taj ćošak dele u složenoj kocki. Na primer, kao i kod ivica, gde su ivicu UR delile gornja i desna strana, tako će ćošak URF deliti gornja (U), desna (R) i prednja (F) strana. Baš kao i kod ivica, zbog toga što naziv ćoška zavisi od složene kocke, taj naziv se nikada ne može promeniti.
+
+Nakon obeležavanja ivica i ćoškova stvara se novi problem. Primetimo da oznaka jednog ćoška, na primer URF, može da nam kaže koje strane ga dele, međutim ne može nam reći da li su boje raspoređene na onaj način kakav je potreban da bi se kocka složila. Baš iz tog razloga uveden je pojam \emph{orijentacije} ćoškova, odnosno ivica (slika \ref{fig:cosak-orijentacija-primer}).
+
+Primetimo da, zbog broja strana koje ih dele, ivice mogu imati dve orijentacije, a ćoškovi tri. Te orijentacije obeležene su sa 0 i 1, kada se radi o ivicama, odnosno 0, 1 i 2 kada se radi o ćoškovima. Za orijentaciju 0 uzima se orijentacija ivica i ćoškova složene kocke. 
+
+\begin{figure}[h]
+        \centering
+        \subfigure{
+            \includegraphics[height=2cm]{images/cosak-orijentacija-primer0.png}
+        }
+        \subfigure{
+            \includegraphics[height=2cm]{images/cosak-orijentacija-primer1.png}
+        }
+        \subfigure{
+            \includegraphics[height=2cm]{images/cosak-orijentacija-primer2.png}
+        }
+        \caption{\emph{Ćošak je na istom mestu ali drugačije orijentisan}}
+        \label{fig:cosak-orijentacija-primer}
+    \end{figure}
+
+
+
+Sada možemo zaključiti da je svaka pozicija kocke precizno određena sa četiri koordinate: \textbf{permutacija ivica}, \textbf{orijentacija ivica}, \textbf{permutacija ćoškova} i \textbf{orijentacija ćoškova}.
+
+Ivica ima 12, pa je broj njihovih permutacija jednak $12! = 479 001 600$. Za svaku od njih postoje dve orijentacij, međutim orijentacija poslednje je određena orijentacijom prethodnih 11 (ukoliko se 11 ivica složi na željeni način, 12. ivica će biti takođe složena; to se može zaključiti na primeru složene kocke, gde je nemoguće da samo jedna ivica bude pogrešno orijentisana), pa je broj mogućih orijentacija jednak $2^{11} = 2048$.
+
+Čoškova ima 8, pa je broj njihovih permutacija jednak $8! = 40320$. Za razliku od orijentacija ivice, orijentacija jednog ćoška ima tri, ali, na isti način kao kod ivica, orijentacija poslednjeg ćoška je određena orijentacijama prethodnih 7. Stoga, broj orijentacija ćoškova je $3^{7} = 2187$
+
+
 
 \begin{primer} I tabele treba da budu u svom okruženju, i na njih je neophodno referisati se u tekstu. Na primer, u tabeli \ref{tab:tabela1} su prikazana različita poravnanja u tabelama.
 
