@@ -6,6 +6,7 @@
 \usepackage{caption}
 \usepackage{color}
 \usepackage{url}
+\usepackage{amsthm}
 \usepackage[T2A]{fontenc} % enable Cyrillic fonts
 \usepackage[utf8]{inputenc} % make weird characters work
 \usepackage{graphicx}
@@ -18,6 +19,7 @@
 
 %\newtheorem{primer}{Пример}[section] %ćirilični primer
 \newtheorem{primer}{Primer}[section]
+\newtheorem{teorema}{Teorema}
 
 \begin{document}
 
@@ -171,7 +173,11 @@ Ivica ima 12, pa je broj njihovih permutacija jednak $12! = 479 001 600$. Za sva
 
 Čoškova ima 8, pa je broj njihovih permutacija jednak $8! = 40320$. Za razliku od orijentacija ivice, orijentacija jednog ćoška ima tri, ali, na isti način kao kod ivica, orijentacija poslednjeg ćoška je određena orijentacijama prethodnih 7. Stoga, broj orijentacija ćoškova je $3^{7} = 2187$
 
-
+\begin{teorema} Permutacije svih kockica su parne.
+\end{teorema}
+\begin{proof}
+    Posmatrajmo šta se dešava kada se jedna strana pomeri za 90 stepeni. Taj potez utiče na 4 ćoška i 4 ivice, i to tako što će svaki od njih zameniti mesta sa jednim susedom, odnosno desiće se 3 razmene ivica i 3 razmene ćoškova (prvi će se zameniti sa drugim, drugi sa trećim i treći sa četvrtim), pa se dobija da se jednim potezom desi 6 razmena, odnosno da je permutacija parna.
+\end{proof}
 
 \begin{primer} I tabele treba da budu u svom okruženju, i na njih je neophodno referisati se u tekstu. Na primer, u tabeli \ref{tab:tabela1} su prikazana različita poravnanja u tabelama.
 
