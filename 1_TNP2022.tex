@@ -2,6 +2,7 @@
 
 \documentclass[a4paper]{article}
 \usepackage{subfigure}
+\usepackage{wrapfig}
 \usepackage{color}
 \usepackage{url}
 \usepackage[T2A]{fontenc} % enable Cyrillic fonts
@@ -60,7 +61,19 @@ Koristite direknto naša slova:
 
 Rubikova kocka ima 6 strana. Svaka od tih strana se može okretati i kocka se, različitim transformacijama, može dovesti u pozamašan broj različitih stanja. Međutim, najbitnije je opisati načine na koje se to može učiniti. Naime, svaka strana se može okrenuti za proizvoljan ugao, s tim što će okretanje za 360 stepeni vratiti kocku u stanje iz kojeg smo krenuli. Okretanje strane za ugao koji nije deljiv sa 90 će narušiti formu kocke. Stoga je najbitnije razmatrati samo one pomeraje strane koji su manji od 360 stepeni, a u isto vreme deljivi sa 90, odnosno 90, 180 i 270 stepeni. Kako se, dakle, jedna strana može pomeriti na samo 3 načina, zaključujemo da se na kocku možem primeniti 18 različitih poteza.
 
-Dalje, kako su potezi uslovljeni stranama, kao i brojem pomeraja te strane, uvedene su oznake
+Kako su potezi uslovljeni pomerajima strana, za njih su uvedene oznake. Prihvaćeno je da se strana ispred nas označava sa F (engl. front), strana naspram nje (zadnja strana kocke) sa B (engl. back), desna strana sa R (engl. right), leva sa L (engl. left), dok se gornja i donja strana označavaju redom sa U (engl. up) i sa D (engl. down) (slika \ref{fig:stranekocke}).
+
+\begin{figure}
+        \centering\includegraphics[height=3cm]{images/kocka-strane.png} 
+        \caption{}
+        \label{fig:stranekocke}
+\end{figure}
+
+Dalje, sa S1, S2 i S' se označavaju redom pomeraji strana za 90, 180, odnosno 270 stepeni u smeru kazaljke na satu, ili matematički negativnom smeru. Na primer, R' bi značilo da se desna strana pomera za 270 stepeni u smeru kazalje na satu ili za 90 stepeni u suprotnom smeru (zbog toga se taj pomeraj označava sa S', a ne sa S3).
+
+Za samo rešenje kocke je potrebno definisati šta se to tačno smatra jednim potezom. Prirodno se nameće rešenje u kojem se za poteze S1 i S' uzima da su dužine 1, dok bi se za potez S2 smatralo da je dužine 2, jer se u suštini sastoji od dva poteza dužine 1. Međutim, ovakav pristup nije pogodan za traženje i određivanje algoritama za rešenje kocke. Stoga je kao standard prihvaćena \emph{metrika polovine okreta} (engl. \emph{Half turn metric - HTM}). To znači da se svaki od 18 poteza, bilo da se sastoji od jednog ili dva okreta strane, smatra kao jedan. Prvi pomenuti način, onaj koji samo pomeraje za 90 stepeni smatra za poteze, naziva se \emph{metrika četvrtine poteza} (engl. \emph{Quarter turn metric - QTM}). 
+
+Nalaženje Božijeg broja u velikoj meri zavisi od toga koji od ova dva načina koristimo. Naime, kao što je već spomenuto, metrika polovine okreta je pogodnija za traženje algoritma rešavanja, pa je tako i nalaženje Božijeg broja za ovaj način bilo čak četiri godine brže i on iznosi 20. Tek 2014. godine je dokazano da je pri korišćenju metrike četvrtine okreta Božiji broj 26.
 
 Na svakom mestu u tekstu naglasiti odakle tačno potiču informacije. Uz sve novouvedene termine u zagradi naglasiti od koje engleske reči termin potiče. 
 
