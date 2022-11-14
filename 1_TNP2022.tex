@@ -14,6 +14,9 @@
 \usepackage[unicode]{hyperref}
 \hypersetup{colorlinks,citecolor=green,filecolor=green,linkcolor=blue,urlcolor=blue}
 
+\newtheorem{primer}{Primer}[section]
+\newtheorem{teorema}{Teorema}
+
 \begin{document}
 
 \title{Rubikova kocka\\ \small{Seminarski rad u okviru kursa\\Tehničko i naučno pisanje\\ Matematički fakultet}}
@@ -35,8 +38,8 @@ U ovom radu je ukratko i pojednostavljeno prikazan istorijat Rubikove kocke, ali
 \setlength{\parindent}{25pt}
 \vspace{0.4cm}
 Godina je 1974. i na Fakultetu primenjenih umetnosti u Budimpešti, jedan profesore pokušava, prema njegovim rečima, da napravi zanimljiv zadatak za svoje studente. Naime, Erne Rubik\footnote{{Ernő Rubik (1944 - )}} je osmislio drvenu strukturu u obliku kocke, čiji delovi bi mogli da se nezavisno pomeraju a da sama struktura ostane sastavljena. \\*
-\hspace{3ex}Kada je shvatio šta je zapravo napravio, izum je patentirao i pokrenuo marketing kampanju. Tako je prva ,,Magična kocka'' polako krenula da osvaja svet i srca matematičara svih uzrasta.\\*
-\hspace{15pt}Zbog svoje specifičnosti i (naizgled) jednostavnosti, ova ,,igračka'' je od samog početka izazvala veliku buru u javnosti. Krenula su mnogobrojna takmičenja u sastavljanju kocke, gde je težnja bila da se ona sastavi u što kraćem vremenskom roku. Iako su se već tada pojavljivali ljudi koji su mogli da je sastave u vremenu manjem od minut, Rubikova kocka se već tada ustoličila kao jedan od ozbiljnijih problema matematičarima, zbog složenosti do koje dolazi nakon samo nekoliko poteza i izraženih algebarskih osobina. \\
+Kada je shvatio šta je zapravo napravio, izum je patentirao i pokrenuo marketing kampanju. Tako je prva ,,Magična kocka'' polako krenula da osvaja svet i srca matematičara svih uzrasta.\\*
+Zbog svoje specifičnosti i (naizgled) jednostavnosti, ova ,,igračka'' je od samog početka izazvala veliku buru u javnosti. Krenula su mnogobrojna takmičenja u sastavljanju kocke, gde je težnja bila da se ona sastavi u što kraćem vremenskom roku. Iako su se već tada pojavljivali ljudi koji su mogli da je sastave u vremenu manjem od minut, Rubikova kocka se već tada ustoličila kao jedan od ozbiljnijih problema matematičarima, zbog složenosti do koje dolazi nakon samo nekoliko poteza i izraženih algebarskih osobina. \\
 
 Tada, ispred najvećih matematičkih umova, su se postavila dva pitanja. Prvo je bilo ,,Da li postoji algoritam po kome bi se kocka mogla sastaviti?'' a drugo je bilo ,,Za koliko najmanje poteza je moguće sastaviti Rubikovu kocku (nezavisno od početne pozicije)?'' Takav broj poteza je dobio naziv \textit{Božji broj} a potencijalni algoritam koji bi nas doveo do optimalnog stanja \textit{Božji algoritam}\footnote{termin Božji algoritam se odnosi i na druge matematičke slagalice (npr. Hanojska kula), ali je prvobitno bio korišćen za problem Rubikove kocke}. Paralaleno sa nastankom Rubikove kocke dolazi i do ubrzanog razvoja računara, te su i oni bili upošljeni u potrazi za brojem i algoritmom. Ovo je bio jedan od prvih ozbiljnijih primera čovekove potrage za rešenje matematičkog problema pomoću računara. \\
 
@@ -48,15 +51,15 @@ U 21. veku se, zbog sve većih mogućnosti računara, stavlja sve veći i veći 
 \section{Elementi Rubikove kocke}
 \label{sec:elementi}
 
-    \begin{wrapfigure}{r}{3cm}
-         \centering
-         \includegraphics[width=2.5cm]{images/slozena-kocka.png} 
-         \caption{}
-         \label{fig:kocka}
-    \end{wrapfigure}
 
-Rubikova kocka je struktura u obliku kocke kojoj je svaka od strana podeljena na 9 manjih kvadrata, što stvara sliku kao da se sastoji od $3^3 = 27$ manjih kocki (slika \ref{fig:kocka}).
-Svaka od strana kocke je obojena jednom bojom i cilj je rasturenu kocku vratiti u početni položaj. Početni položaj kocke je podrazumevano položaj kao na slici (slika \ref{fig:kocka})
+ \begin{figure}[h!]
+        \centering\includegraphics[height=3cm]{images/slozena-kocka.png} 
+        \caption{Složena kocka}
+        \label{fig:slozenakocka}
+\end{figure}
+
+Rubikova kocka je struktura u obliku kocke kojoj je svaka od strana podeljena na 9 manjih kvadrata, što stvara sliku kao da se sastoji od $3^3 = 27$ manjih kocki (slika \ref{fig:slozenakocka}).
+Svaka od strana kocke je obojena jednom bojom i cilj je rasturenu kocku vratiti u početni položaj. Početni položaj kocke je podrazumevano položaj kao na slici (slika \ref{fig:slozenakocka})
 
 U samom centru kocke se ne nalazi nijedna kockica što ostavlja $27 - 1 = 26$ manjih kocki koje čine celinu. Dalje ćemo svaku od tih manjih kocki zvati \textit{kockica} (engl. ~{\em cubie}).
 Njih ćemo podeliti u tri grupe.    
@@ -89,6 +92,7 @@ Njih ćemo podeliti u tri grupe.
 \end{itemize} 
 
 
+\pagebreak
 \section{Potezi}	
 \label{sec:potezi}
 
@@ -96,7 +100,7 @@ Rubikova kocka ima 6 strana. Svaka od tih strana se može okretati i kocka se, r
 
 Kako su potezi uslovljeni pomerajima strana, za njih su uvedene oznake. Prihvaćeno je da se strana ispred nas označava sa F (engl. ~{\em front}), strana naspram nje (zadnja strana kocke) sa B (engl. ~{\em back}), desna strana sa R (engl. ~{\em right}), leva sa L (engl. ~{\em left}), dok se gornja i donja strana označavaju redom sa U (engl. ~{\em up}) i sa D (engl. ~{\em down}) (slika \ref{fig:stranekocke}).
 
-\begin{figure}
+\begin{figure}[h!]
         \centering\includegraphics[height=3cm]{images/kocka-strane.png} 
         \caption{}
         \label{fig:stranekocke}
@@ -176,24 +180,66 @@ Ivica ima 12, pa je broj njihovih permutacija jednak $12! = 479 001 600$. Za sva
 
 Koliko pozicija može imati jedna kocka? Iz onoga što smo do sada videli, možemo zaključiti da postoji $12! \cdot 8!$ permutacija, međutim, zbog teoreme 1, znamo da one mogu biti samo parne. Zato je ukupan broj permutacija zapravo jednak $\frac{12! \cdot 8!}{2}$. Za svaku od tih permutacija postoji $2^{11} \cdot 3^{7}$ orijentacija (jer su one određene sa 11 ivica i 7 ćoškova), što znači da jedna kocka može imati $\frac{1}{2} \cdot 12! \cdot 8! \cdot 2^{11} \cdot 3^7 = 43,252,003,274,489,856,000$ različitih pozicija. Red veličine ove vrednosti je $10^{19}$ i to je jedan od glavnih razloga zašto je pronalazak algoritma za rešavanje bio toliki problem.
 
-\begin{primer} I tabele treba da budu u svom okruženju, i na njih je neophodno referisati se u tekstu. Na primer, u tabeli \ref{tab:tabela1} su prikazana različita poravnanja u tabelama.
+
+
+
+\section{Algoritmi}
+\label{sec:algoritmi}
+
+Glavni pomak u rešavanju Rubikove kocke je napravljen uz pomoć tri glavna algoritma:
+
+\begin{itemize}
+\item Tisltvejtov
+\item Kosiembin
+\item Korfov
+\end{itemize} 
+
+ Generalna ideja je da se rešavanje Rubikove kocke podeli na više faza i da se svaka od njih pojedinačno rešava, dok se ne dodje do složene kocke.
+Na primer, jedan od najpoznatijih algoritama za ljudsko rešavanje prvo slaže krst na jednoj strani, zatim, tu stranu, pa onda naredni sloj i na kraju poslednji sloj, odnosno stranu.
+
+\begin{figure}[h!]
+        \centering
+        \subfigure{
+            \includegraphics[height=2cm]{images/krst.png}
+        }
+        \subfigure{
+            \includegraphics[height=2cm]{images/prvi-sloj.png} 
+        }
+        \subfigure{
+            \includegraphics[height=2cm]{images/prva-dva-sloja.png}
+        }
+        \subfigure{
+            \includegraphics[height=2cm]{images/krst-gore.png}
+        }
+        \subfigure{
+            \includegraphics[height=2cm]{images/slozena-kocka.png}
+        }
+        \caption{Pojednostavljeni prikaz tzv. početnichog metoda}
+        \label{fig:beginners-method}
+    \end{figure}
+
+Slaganje jedne faze mnogo je lakše od slaganja cele kocke, odnosno, u slučaju računara, ima manje pozicija kroz koje treba proći. 
+    Za računar kod takvog načina podele ima nekoliko problema.
+    Prvi je što je broj faza generalno veliki pa čak i ako bi svaku od njih rešili optimalno, konačno rešenje bi moglo da ispadne dosta duže nego očekivano.
+    Osim toga, takva podela je laksha samo ljudima za slaganje, neke od tih faza su po broju slučajeva gotovo isto zahtevne kao i sama kocka.
 
 \begin{table}[h!]
 \begin{center}
-\caption{Razlčita poravnanja u okviru iste tabele ne treba koristiti jer su nepregledna.}
-\begin{tabular}{|c|l|r|} \hline
-centralno poravnanje& levo poravnanje& desno poravnanje\\ \hline
-a &b&c\\ \hline
-d &e&f\\ \hline
+\caption{Svetski rekordi u brzom slaganju različitih kocki.}
+\begin{tabular}{|c|l|} \hline
+dimenzija& vreme\\ \hline
+3x3x3 &3,47\\ \hline
+2x2x2 &0,49\\ \hline
+4x4x4 &16,79\\ \hline
+5x5x5 &33,02\\ \hline
+piramida &0,91\\ \hline
+3x3x3 sa povezom &14,51\\ \hline
 \end{tabular}
 \label{tab:tabela1}
 \end{center}
 \end{table}
 
-\end{primer}
-
-\section{Algoritmi}
-\label{sec:algoritmi}
+U tabeli \ref{tab:tabela1} su u sekundama prikazana najbolja vremena rešavanja raznih dimenzija i vrsta rubikovih kocki koje su za to vreme složene.
 
 \section{Zaključak}
 \label{sec:zakljucak}
@@ -222,23 +268,18 @@ Ovde pišem zaključak.
 
 \begin{thebibliography}{9}
 
-\bibitem{laski2009software} J. Laski and W. Stanley. \emph{Software Verification and Analysis}. Springer- Verlag, London, 2009.
+\bibitem{viki} \emph{Rubik's Cube} https://en.wikipedia.org/wiki/Rubik/\%27s\_Cube, 7/11/2022
 
-\bibitem{gcc} Free Software Foundation. GNU gcc, 2013. on-line at: http://gcc. gnu.org/.
+\bibitem{bozijibroj} T. Rokicki, H. Kociemba, D. Morley, and J. Dethridge, \emph{God’s Number is 20.} https://cube20.org
 
-\bibitem{haltingproblem} A. M. Turing. \emph{On Computable Numbers, with an application to the Entscheidungsproblem}. Proceedings of the London Mathematical Society, 2(42):230–265, 1936.
+\bibitem{potezi} J. Chen, Group Theory and the Rubik’s Cube. http://people.math.harvard.edu/~jjchen/docs/Group\%20Theory\%20and\%20the\%20Rubik’s\%20Cube.pdf
 
+\bibitem{rekordi} \emph{Records} https://www.worldcubeassociation.org/results/records 10/11/2022
+
+\bibitem{} \emph{The History of Rubik's Cube – Ernő Rubik} Inventors.about.com. 9/4/2012
 
 \end{thebibliography}
 
-
 \appendix
-\section{Dodatak}
-Ovde pišem dodatne stvari, ukoliko za time ima potrebe.
-Ovde pišem dodatne stvari, ukoliko za time ima potrebe.
-Ovde pišem dodatne stvari, ukoliko za time ima potrebe.
-Ovde pišem dodatne stvari, ukoliko za time ima potrebe.
-Ovde pišem dodatne stvari, ukoliko za time ima potrebe.
-
 
 \end{document}
