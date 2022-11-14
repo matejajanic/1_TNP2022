@@ -10,7 +10,7 @@
 \usepackage{amsmath}
 \usepackage[utf8]{inputenc} % čudni karakteri
 \usepackage{graphicx}
-
+\usepackage[english, serbian]{babel}
 \usepackage[unicode]{hyperref}
 \hypersetup{colorlinks,citecolor=green,filecolor=green,linkcolor=blue,urlcolor=blue}
 
@@ -80,7 +80,7 @@ Njih ćemo podeliti u tri grupe.
     \end{figure}
     
 \begin{itemize}
-\item Medju kockicama postoje one koje su obojene samo jednom bojom.
+\item Među kockicama postoje one koje su obojene samo jednom bojom.
     One se nalaze u centru svake strane kocke i na njih dozvoljeni potezi ne utiču tj. ostavljaju ih na istom mestu (dozvoljeni potezi su opisani u narednom odeljku).
     Tih kockica ima 6 i zovemo ih \textit{centri} (slika \ref{fig:centri}). One nisu od tolikog značaja zato što su kod standardne Rubikove kocke praktichno fiksne\footnote{postoje varijacije Rubikove kocke gde se na stranama, umesto jednobojnih, nalaze šarene slike i onda centri dobijaju na značaju jer je za slaganje bitna njihova orijentacija}.
 \item Druga grupa kockica je ona koja ima po dve svoje strane obojene.
@@ -107,41 +107,6 @@ Dalje, sa S1, S2 i S' se označavaju redom pomeraji strana za 90, 180, odnosno 2
 Za samo rešenje kocke je potrebno definisati šta se to tačno smatra jednim potezom. Prirodno se nameće rešenje u kojem se za poteze S1 i S' uzima da su dužine 1, dok bi se za potez S2 smatralo da je dužine 2, jer se u suštini sastoji od dva poteza dužine 1. Međutim, ovakav pristup nije pogodan za traženje i određivanje algoritama za rešenje kocke. Stoga je kao standard prihvaćena \emph{metrika polovine okreta} (engl. ~{\em Half turn metric - HTM}). To znači da se svaki od 18 poteza, bilo da se sastoji od jednog ili dva okreta strane, smatra kao jedan. Prvi pomenuti način, onaj koji samo pomeraje za 90 stepeni smatra za poteze, naziva se \emph{metrika četvrtine poteza} (engl. ~{\em Quarter turn metric - QTM}). 
 
 Nalaženje Božijeg broja u velikoj meri zavisi od toga koji od ova dva načina koristimo. Naime, kao što je već spomenuto, metrika polovine okreta je pogodnija za traženje algoritma rešavanja, pa je tako i nalaženje Božijeg broja za ovaj način bilo čak četiri godine brže i on iznosi 20. Tek 2014. godine je dokazano da je pri korišćenju metrike četvrtine okreta Božiji broj 26.
-
-Na svakom mestu u tekstu naglasiti odakle tačno potiču informacije. Uz sve novouvedene termine u zagradi naglasiti od koje engleske reči termin potiče. 
-
-Naredni primeri ilustruju način uvođenja enlegskih termina kao i citiranje.
-
-\begin{primer}
-Problem zaustavljanja (eng.~{\em halting problem}) je neodlučiv \cite{haltingproblem}.
-\end{primer}
-
-\begin{primer}
-Za prevođenje programa napisanih u programskom jeziku C može se koristiti GCC kompajler \cite{gcc}.
-\end{primer}
-
-\begin{primer}
- Da bi se ispitivala ispravost softvera, najpre je potrebno precizno definisati njegovo ponašanje \cite{laski2009software}. 
-\end{primer}
-
-Ukoliko za unos referenci koriste datoteku {\em seminarski.bib},  prevođenje u pdf format u Linux okruženju može se uraditi na sledeći način:
-\begin{verbatim}
-pdflatex TemaImePrezime.tex 
-bibtex TemaImePrezime.aux 
-pdflatex TemaImePrezime.tex 
-pdflatex TemaImePrezime.tex 
-\end{verbatim}
-Prvo latexovanje je neophodno da bi se generisao {\em .aux} fajl. {\em bibtex} proizvodi odgovarajući {\em .bbl} fajl koji se koristi za generisanje literature. 
-Potrebna su dva prolaza (dva puta pdflatex) da bi se reference ubacile u tekst (tj da ne bi ostali znakovi pitanja umesto referenci). Dodavanjem novih referenci potrebno je ponoviti ceo postupak.  
-
-
-Broj naslova i podnaslova je proizvoljan. Neophodni su samo Uvod i Zaključak. Na poglavlja unutar teksta referisati se po potrebi. 
-\begin{primer}
-U odeljku \ref{sec:naslov1} precizirani su osnovni pojmovi, dok su zaključci dati u odeljku \ref{sec:zakljucak}.
-\end{primer}
-
-
-
 
 \section{Permutacije}
 \label{permutacije}
@@ -227,10 +192,8 @@ d &e&f\\ \hline
 
 \end{primer}
 
-
-
-
-
+\section{Algoritmi}
+\label{sec:algoritmi}
 
 \section{Zaključak}
 \label{sec:zakljucak}
