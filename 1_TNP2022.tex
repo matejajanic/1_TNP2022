@@ -7,6 +7,7 @@
 \usepackage{color}
 \usepackage{url}
 \usepackage{amsthm}
+\usepackage{amsmath}
 \usepackage[T2A]{fontenc} % enable Cyrillic fonts
 \usepackage[utf8]{inputenc} % make weird characters work
 \usepackage{graphicx}
@@ -30,7 +31,7 @@
 \maketitle
 
 \abstract{
-U ovom tekstu je ukratko prikazana osnovna forma seminarskog rada. Obratite pažnju da je pored ove .pdf datoteke, u prilogu i odgovarajuća .tex datoteka, kao i .bib datoteka korišćena za generisanje literature. Na prvoj strani seminarskog rada su naslov, apstrakt i sadržaj, i to sve mora da stane na prvu stranu! Kako bi Vaš seminarski zadovoljio standarde i očekivanja, koristite uputstva i materijale sa predavanja na temu pisanja seminarskih radova. Ovo je samo šablon koji se odnosi na fizički izgled seminarskog rada (šablon koji \emph{morate} da ispoštujete!) kao i par tehničkih pomoćnih uputstava. 
+U ovom radu su ukratko i pojednostavljeno prikazani istorijat Rubikove kocke, ali i načini njenog funkcionisanja i rešavanja. Potrebno je naglasiti da sami algoritmi za rešavanje Rubikove kocke mogu biti veoma komplikovani za razumevanje i zahtevaju puno dokaza i teorema, koje ovde nije bilo moguće izložiti. 
 
 \tableofcontents
 
@@ -178,6 +179,8 @@ Ivica ima 12, pa je broj njihovih permutacija jednak $12! = 479 001 600$. Za sva
 \begin{proof}
     Posmatrajmo šta se dešava kada se jedna strana pomeri za 90 stepeni. Taj potez utiče na 4 ćoška i 4 ivice, i to tako što će svaki od njih zameniti mesta sa jednim susedom, odnosno desiće se 3 razmene ivica i 3 razmene ćoškova (prvi će se zameniti sa drugim, drugi sa trećim i treći sa četvrtim), pa se dobija da se jednim potezom desi 6 razmena, odnosno da je permutacija parna.
 \end{proof}
+
+Koliko pozicija može imati jedna kocka? Iz onoga što smo do sada videli, možemo zaključiti da postoji $12! \cdot 8!$ permutacija, međutim, zbog teoreme 1, znamo da one mogu biti samo parne. Zato je ukupan broj permutacija zapravo jednak $\frac{12! \cdot 8!}{2}$. Za svaku od tih permutacija postoji $2^{11} \cdot 3^{7}$ orijentacija (jer su one određene sa 11 ivica i 7 ćoškova), što znači da jedna kocka može imati $\frac{1}{2} \cdot 12! \cdot 8! \cdot 2^{11} \cdot 3^7 = 43,252,003,274,489,856,000$ različitih pozicija. Red veličine ove vrednosti je $10^{19}$ i to je jedan od glavnih razloga zašto je pronalazak algoritma za rešavanje bio toliki problem.
 
 \begin{primer} I tabele treba da budu u svom okruženju, i na njih je neophodno referisati se u tekstu. Na primer, u tabeli \ref{tab:tabela1} su prikazana različita poravnanja u tabelama.
 
