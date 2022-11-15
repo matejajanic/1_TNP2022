@@ -35,7 +35,7 @@ U ovom radu je ukratko i pojednostavljeno prikazan istorijat Rubikove kocke, ali
 \section{Uvod i istorijat}
 \label{sec:uvod}
 
-\setlength{\parindent}{25pt}
+%\setlength{\parindent}{25pt}
 \vspace{0.4cm}
 Godina je 1974. i na Fakultetu primenjenih umetnosti u Budimpešti, jedan profesore pokušava, prema njegovim rečima, da napravi zanimljiv zadatak za svoje studente. Naime, Erne Rubik\footnote{{Ernő Rubik (1944 - )}} je osmislio drvenu strukturu u obliku kocke, čiji delovi bi mogli da se nezavisno pomeraju a da sama struktura ostane sastavljena. \\*
 Kada je shvatio šta je zapravo napravio, izum je patentirao i pokrenuo marketing kampanju. Tako je prva ,,Magična kocka'' polako krenula da osvaja svet i srca matematičara svih uzrasta.\\*
@@ -53,7 +53,7 @@ U 21. veku se, zbog sve većih mogućnosti računara, stavlja sve veći i veći 
 
 
  \begin{figure}[h!]
-        \centering\includegraphics[height=3cm]{images/slozena-kocka.png} 
+        \centering\includegraphics[height=2.5cm]{images/slozena-kocka.png} 
         \caption{Složena kocka}
         \label{fig:slozenakocka}
 \end{figure}
@@ -61,7 +61,7 @@ U 21. veku se, zbog sve većih mogućnosti računara, stavlja sve veći i veći 
 Rubikova kocka je struktura u obliku kocke kojoj je svaka od strana podeljena na 9 manjih kvadrata, što stvara sliku kao da se sastoji od $3^3 = 27$ manjih kocki (slika \ref{fig:slozenakocka}).
 Svaka od strana kocke je obojena jednom bojom i cilj je rasturenu kocku vratiti u početni položaj. Početni položaj kocke je podrazumevano položaj kao na slici (slika \ref{fig:slozenakocka})
 
-U samom centru kocke se ne nalazi nijedna kockica što ostavlja $27 - 1 = 26$ manjih kocki koje čine celinu. Dalje ćemo svaku od tih manjih kocki zvati \textit{kockica} (engl. ~{\em cubie}).
+U samom centru kocke se ne nalazi nijedna kockica što ostavlja $27 - 1 = 26$ manjih kocki koje čine celinu. Dalje ćemo svaku od tih manjih kocki zvati \textit{kockica} (engl.~{\em cubie}).
 Njih ćemo podeliti u tri grupe.    
     
     \begin{figure}[h]
@@ -87,8 +87,8 @@ Njih ćemo podeliti u tri grupe.
     One se nalaze u centru svake strane kocke i na njih dozvoljeni potezi ne utiču tj. ostavljaju ih na istom mestu (dozvoljeni potezi su opisani u narednom odeljku).
     Tih kockica ima 6 i zovemo ih \textit{centri} (slika \ref{fig:centri}). One nisu od tolikog značaja zato što su kod standardne Rubikove kocke praktichno fiksne\footnote{postoje varijacije Rubikove kocke gde se na stranama, umesto jednobojnih, nalaze šarene slike i onda centri dobijaju na značaju jer je za slaganje bitna njihova orijentacija}.
 \item Druga grupa kockica je ona koja ima po dve svoje strane obojene.
-    Takvih kockica ima 12 i dalje ih zovemo \textit{ivice} (engl. ~{\em edges}) (slika \ref{fig:ivice}).
-\item Poslednja, treća grupa je ona sa po tri obojene strane kojih ima 8 i njih zovemo \textit{ćoškovi} (engl. ~{\em corners}) (slika \ref{fig:coskovi}).
+    Takvih kockica ima 12 i dalje ih zovemo \textit{ivice} (engl.~{\em edges}) (slika \ref{fig:ivice}).
+\item Poslednja, treća grupa je ona sa po tri obojene strane kojih ima 8 i njih zovemo \textit{ćoškovi} (engl.~{\em corners}) (slika \ref{fig:coskovi}).
 \end{itemize} 
 
 
@@ -195,7 +195,7 @@ Glavni pomak u rešavanju Rubikove kocke je napravljen uz pomoć tri glavna algo
 \end{itemize} 
 
  Generalna ideja je da se rešavanje Rubikove kocke podeli na više faza i da se svaka od njih pojedinačno rešava, dok se ne dodje do složene kocke.
-Na primer, jedan od najpoznatijih algoritama za ljudsko rešavanje prvo slaže krst na jednoj strani, zatim, tu stranu, pa onda naredni sloj i na kraju poslednji sloj, odnosno stranu.
+Na primer, jedan od najpoznatijih algoritama za rešavanje prvo slaže krst na jednoj strani, zatim, tu stranu, pa onda naredni sloj i na kraju poslednji sloj, odnosno stranu.
 
 \begin{figure}[h!]
         \centering
@@ -218,10 +218,7 @@ Na primer, jedan od najpoznatijih algoritama za ljudsko rešavanje prvo slaže k
         \label{fig:beginners-method}
     \end{figure}
 
-Slaganje jedne faze mnogo je lakše od slaganja cele kocke, odnosno, u slučaju računara, ima manje pozicija kroz koje treba proći. 
-    Za računar kod takvog načina podele ima nekoliko problema.
-    Prvi je što je broj faza generalno veliki pa čak i ako bi svaku od njih rešili optimalno, konačno rešenje bi moglo da ispadne dosta duže nego očekivano.
-    Osim toga, takva podela je laksha samo ljudima za slaganje, neke od tih faza su po broju slučajeva gotovo isto zahtevne kao i sama kocka.
+Nakon sto je napravljena i plasirana na tržište prva Rubikova kocka (dimenzija 3x3x3), dostigla je neverovatnu popularnost širom sveta. Dosta ljudi je bilo inspirisano da, na osnovu funkcionisanja klasične Rubikove kocke, napravi nove "kocke" različitih dimenzija i oblika (U ovoj rečenici, pod terminom "kocka" podrazumeva se figura podeljena na više manjih, koja se rešava na isti ili sličan način kao i klasična Rubikova kocka). Neke od njih su jednostavno identične kocke drugih dimenzija i stvoreno je desetak takvih kocki, s tim što algoitam za rešavanje, za sad, postoji samo do kocke dimenzija 21x21x21. Ostale se zasnivaju na istom principu slaganja boja na pravilan način, ali je promenjena ili sama figura ili manje figure od kojih se ona sastoji. Primeri za ovakve puzle su Piraminks (engl. ~{\em Piraminx}), koja je piramidalna, kocka sa ogledalima (engl. ~{\em Mirror cube}), koja prilikom "mešanja" potpuno menja svoj oblik (upravo zato je cilj složiti puzlu da ponovo bude u obliku kocke, pa na njoj nema boja i otuda i ime). Pored običnog slaganja kocke, neki ljudi su se vremenom osmelili da sebi otežaju posao i danas na raznim takmičenjima možemo videti razne zanimljive kategorije, kao što su slaganje kocke jednom rukom ili slaganje kocke sa povezom na očima. U tabeli \ref{tab:tabela1} su, u sekundama, prikazana najbolja vremena za neke od ovih kategorija. 
 
 \begin{table}[h!]
 \begin{center}
@@ -239,24 +236,10 @@ piramida &0,91\\ \hline
 \end{center}
 \end{table}
 
-U tabeli \ref{tab:tabela1} su u sekundama prikazana najbolja vremena rešavanja raznih dimenzija i vrsta rubikovih kocki koje su za to vreme složene.
-
 \section{Zaključak}
 \label{sec:zakljucak}
 
-Ovde pišem zaključak. 
-Ovde pišem zaključak. 
-Ovde pišem zaključak. 
-Ovde pišem zaključak. 
-Ovde pišem zaključak. 
-Ovde pišem zaključak. 
-Ovde pišem zaključak. 
-Ovde pišem zaključak. 
-Ovde pišem zaključak. 
-Ovde pišem zaključak. 
-Ovde pišem zaključak. 
-Ovde pišem zaključak. 
-
+ 
 
 \addcontentsline{toc}{section}{Literatura}
 \appendix
