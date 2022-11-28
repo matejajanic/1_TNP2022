@@ -177,7 +177,7 @@ Ivica ima 12, pa je broj njihovih permutacija jednak $12! = 479 001 600$. Za sva
     Posmatrajmo šta se dešava kada se jedna strana pomeri za 90 stepeni. Taj potez utiče na 4 ćoška i 4 ivice, i to tako što će svaki od njih zameniti mesta sa jednim susedom, odnosno desiće se 3 razmene ivica i 3 razmene ćoškova (prvi će se zameniti sa drugim, drugi sa trećim i treći sa četvrtim), pa se dobija da se jednim potezom desi 6 razmena, odnosno da je permutacija parna.
 \end{proof}
 
-Koliko pozicija može imati jedna kocka? Iz onoga što smo do sada videli, možemo zaključiti da postoji $12! \cdot 8!$ permutacija, međutim, zbog teoreme 1, znamo da one mogu biti samo parne. Zato je ukupan broj permutacija zapravo jednak $\frac{12! \cdot 8!}{2}$. Za svaku od tih permutacija postoji $2^{11} \cdot 3^{7}$ orijentacija (jer su one određene sa 11 ivica i 7 ćoškova), što znači da jedna kocka može imati $\frac{1}{2} \cdot 12! \cdot 8! \cdot 2^{11} \cdot 3^7 = 43,252,003,274,489,856,000$ različitih pozicija. Red veličine ove vrednosti je $10^{19}$ i to je jedan od glavnih razloga zašto je pronalazak algoritma za rešavanje bio toliki problem.
+Koliko pozicija može imati jedna kocka? Iz onoga što smo do sada videli, možemo zaključiti da postoji $12! \cdot 8!$ permutacija, međutim, zbog teoreme 1, znamo da one mogu biti samo parne. Zato je ukupan broj permutacija zapravo jednak $\frac{12! \cdot 8!}{2}$. Za svaku od tih permutacija postoji $2^{11} \cdot 3^{7}$ orijentacija (jer su one određene sa 11 ivica i 7 ćoškova), što znači da jedna kocka može imati $\frac{1}{2} \cdot 12! \cdot 8! \cdot 2^{11} \cdot 3^7 = 43,252,003,274,489,856,000$ različitih pozicija. Red veličine ove vrednosti je $10^{19}$ i to je jedan od glavnih razloga zašto je pronalazak algoritma za rešavanje bio toliki problem.\cite{permutacije}
 
 
 
@@ -217,7 +217,7 @@ Na primer, jedan od najpoznatijih algoritama za rešavanje prvo slaže krst na j
         \label{fig:beginners-method}
     \end{figure}
 
-Nakon sto je napravljena i plasirana na tržište prva Rubikova kocka (dimenzija 3x3x3), dostigla je neverovatnu popularnost širom sveta. Dosta ljudi je bilo inspirisano da, na osnovu funkcionisanja klasične Rubikove kocke, napravi nove "kocke" različitih dimenzija i oblika (U ovoj rečenici, pod terminom "kocka" podrazumeva se figura podeljena na više manjih, koja se rešava na isti ili sličan način kao i klasična Rubikova kocka). Neke od njih su jednostavno identične kocke drugih dimenzija i stvoreno je desetak takvih kocki, s tim što algoitam za rešavanje, za sad, postoji samo do kocke dimenzija 21x21x21. Ostale se zasnivaju na istom principu slaganja boja na pravilan način, ali je promenjena ili sama figura ili manje figure od kojih se ona sastoji. Primeri za ovakve puzle su Piraminks (engl. ~{\em Piraminx}), koja je piramidalna, kocka sa ogledalima (engl. ~{\em Mirror cube}), koja prilikom "mešanja" potpuno menja svoj oblik (upravo zato je cilj složiti puzlu da ponovo bude u obliku kocke, pa na njoj nema boja i otuda i ime). Pored običnog slaganja kocke, neki ljudi su se vremenom osmelili da sebi otežaju posao i danas na raznim takmičenjima možemo videti razne zanimljive kategorije, kao što su slaganje kocke jednom rukom ili slaganje kocke sa povezom na očima. U tabeli \ref{tab:tabela1} su, u sekundama, prikazana najbolja vremena za neke od ovih kategorija. 
+Nakon što je napravljena i plasirana na tržište prva Rubikova kocka (dimenzija 3x3x3), dostigla je neverovatnu popularnost širom sveta. Dosta ljudi je bilo inspirisano da, na osnovu funkcionisanja klasične Rubikove kocke, napravi nove "kocke" različitih dimenzija i oblika (U ovoj rečenici, pod terminom "kocka" podrazumeva se figura podeljena na više manjih, koja se rešava na isti ili sličan način kao i klasična Rubikova kocka). Neke od njih su jednostavno identične kocke drugih dimenzija i stvoreno je desetak takvih kocki, s tim što algoitam za rešavanje, za sad, postoji samo do kocke dimenzija 21x21x21. Ostale se zasnivaju na istom principu slaganja boja na pravilan način, ali je promenjena ili sama figura ili manje figure od kojih se ona sastoji. Primeri za ovakve puzle su Piraminks (engl. ~{\em Piraminx}), koja je piramidalna, kocka sa ogledalima (engl. ~{\em Mirror cube}), koja prilikom "mešanja" potpuno menja svoj oblik (upravo zato je cilj složiti puzlu da ponovo bude u obliku kocke, pa na njoj nema boja i otuda i ime). Pored običnog slaganja kocke, neki ljudi su se vremenom osmelili da sebi otežaju posao i danas na raznim takmičenjima možemo videti razne zanimljive kategorije, kao što su slaganje kocke jednom rukom ili slaganje kocke sa povezom na očima. U tabeli \ref{tab:tabela1} su, u sekundama, prikazana najbolja vremena za neke od ovih kategorija.\cite{rekordi} 
 
 \begin{table}[h!]
 \begin{center}
@@ -254,15 +254,18 @@ Upravo zbog toga možemo reći da je Rubikova kocka jedna od najuticajnijih i na
 
 \begin{thebibliography}{9}
 
-\bibitem{viki} \emph{Rubik's Cube} https://en.wikipedia.org/wiki/Rubik/\%27s\_Cube, 7/11/2022
+\bibitem{viki} \emph{Rubik's Cube} \url{https://en.wikipedia.org/wiki/Rubik/\%27s\_Cube} 7/11/2022
 
-\bibitem{bozijibroj} T. Rokicki, H. Kociemba, D. Morley, and J. Dethridge, \emph{God’s Number is 20.} https://cube20.org
+\bibitem{bozijibroj} T. Rokicki, H. Kociemba, D. Morley, and J. Dethridge, \emph{God’s Number is 20.} \url{https://cube20.org}
 
-\bibitem{potezi} J. Chen, Group Theory and the Rubik’s Cube. http://people.math.harvard.edu/~jjchen/docs/Group\%20Theory\%20and\%20the\%20Rubik’s\%20Cube.pdf
+\bibitem{potezi} J. Chen, Group Theory and the Rubik’s Cube. \url{http://people.math.harvard.edu/~jjchen/docs/Group\%20Theory\%20and\%20the\%20Rubik's\%20Cube.pdf} 11/11/2022
 
-\bibitem{rekordi} \emph{Records} https://www.worldcubeassociation.org/results/records, 10/11/2022
+\bibitem{permutacije} H. Kaur, Algorithms for solving the Rubik’s cube, 2015.\url{http://www.diva-portal.org/smash/get/diva2:816583/FULLTEXT01.pdf} 28/11/2022
 
-\bibitem{} \emph{The History of Rubik's Cube – Erno Rubik} Inventors.about.com, 9/4/2012
+
+\bibitem{rekordi} \emph{Records} \url{https://www.worldcubeassociation.org/results/records} 15/11/2022
+
+\bibitem{} \emph{The History of Rubik's Cube – Erno Rubik} \url{https://www.thoughtco.com/rubik-and-the-cube-1992378}
 
 \end{thebibliography}
 
