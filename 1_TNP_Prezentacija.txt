@@ -1,0 +1,85 @@
+\documentclass{beamer}
+\usepackage{beamerthemeshadow}
+\usepackage{graphicx}
+\usepackage{color}
+\usepackage[utf8]{inputenc}
+\usepackage{hyperref}
+\usepackage[flushleft]{threeparttable}
+\definecolor{beamer@darkred}{rgb}{0.85,0.1,0.1}
+\setbeamercolor{structure}{fg=beamer@darkred}
+
+\def\d{{\fontencoding{T1}\selectfont\dj}}
+\def\D{{\fontencoding{T1}\selectfont\DJ}}
+
+
+\title{Tehničko i naučno pisanje}
+\subtitle{-- Metodologija stručnih i naučnih izlaganja --}
+\author{dr Jelena Graovac}
+\institute{Matematički fakultet\\Univerzitet u Beogradu}
+\date{
+	\footnotesize{Beograd, 2020.}	
+}
+
+\begin{document}
+\begin{frame}
+	\thispagestyle{empty}
+	\titlepage
+\end{frame}
+
+\addtocounter{framenumber}{-1}
+
+\begin{frame}[fragile]\frametitle{Literatura}
+	\begin{itemize}
+		\item Zasnovano na:\\
+		Goran Nenadic, Predrag Janičić, Aleksandar Samardžić: \LaTeX{} za autore, Beograd, Kompjuter biblioteka, 2003.
+		(\url{http://poincare.matf.bg.ac.rs/~janicic//latex2e/})
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Pregled} % Table of contents slide, comment this block out to remove it
+	\tableofcontents[hidesubsections] 
+\end{frame}
+
+\section{Metodologija stručnih i naučnih izlaganja}
+
+\begin{frame}[fragile]\frametitle{Kako ljudi pamte?}
+	\begin{itemize}	
+		\item 10\% onoga što pročitaju
+		\item 20\% onoga što čuju
+		\item 30\% onoga što vide
+		\item 50\% onoga što čuju i vide
+		\item 70\% onoga što kažu i napišu
+		\item 90\% onoga što rade
+	\end{itemize}
+\end{frame}
+
+\subsection{Kako ljudi uče?}
+
+\begin{frame}[fragile]\frametitle{Kako ljudi uče?}
+	\begin{itemize}	
+		\item Verbalnim putem (čitanjem i slušanjem)
+		\item Vizuelnim putem (gledanjem)
+		\item Aktivnim učešćem (gledanjem, slušanjem i činjenjem)
+	\end{itemize}
+\end{frame}
+
+\section{Zakljucak}
+
+\begin{frame}[fragile]\frametitle{Kako ljudi uče?}
+	\begin{itemize}	
+		\item Ljudi ne komuniciraju samo rečima. Prema nekim
+		istraživanjima:
+		\begin{itemize}
+			\item samo 8\% poruke se prenese samim rečima (verbalna komunikacija)
+			\item 37\% se prenesi bojom glasa, tonalitetom, pauzama u govoru (paralingvističkim znakovima)
+			\item 55\% poruke se prenosi govorom tela: pratećim pokretima, izrazom lica i
+			očiju, stavom tela i drugo (neverbalna komunikacija)
+		\end{itemize}
+		\item Verbalnim putem se najčešće prenose činjenice i
+		sirove informacije, dok se neverbalnim putem prenose stavovi i
+		emocionalni odnos prema činjenicama koje izlažemo.
+	\end{itemize}
+\end{frame}
+
+\end{document}
