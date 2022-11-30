@@ -96,7 +96,7 @@ Njih ima 8 i zovemo ih \textit{ćoškovi} (engl.~{\em corners}) (slika \ref{fig:
 
 Rubikova kocka ima 6 strana. Svaka od tih strana se može okretati i kocka se, različitim transformacijama, može dovesti u pozamašan broj različitih stanja. Međutim, najbitnije je opisati načine na koje se to može učiniti. Naime, svaka strana se može okrenuti za proizvoljan ugao, s tim što će okretanje za 360 stepeni vratiti kocku u stanje iz kojeg smo krenuli. Okretanje strane za ugao koji nije deljiv sa 90 će narušiti formu kocke. Stoga je najbitnije razmatrati samo one pomeraje strane koji su manji od 360 stepeni, a u isto vreme deljivi sa 90, odnosno 90, 180 i 270 stepeni. Kako se, dakle, jedna strana može pomeriti na samo 3 načina, zaključujemo da se na kocku može primeniti 18 različitih poteza.
 
-Kako su potezi uslovljeni pomerajima strana, za njih su uvedene oznake. Prihvaćeno je da se strana ispred nas označava sa F (engl. ~{\em front}), strana naspram nje (zadnja strana kocke) sa B (engl. ~{\em back}), desna strana sa R (engl. ~{\em right}), leva sa L (engl. ~{\em left}), dok se gornja i donja strana označavaju redom sa U (engl. ~{\em up}) i sa D (engl. ~{\em down}) (slika \ref{fig:stranekocke}).
+Kako su potezi uslovljeni pomerajima strana, za njih su uvedene oznake. Prihvaćeno je da se strana ispred nas označava sa F (engl. ~{\em front}), strana naspram nje (zadnja strana kocke) sa B (engl. ~{\em back}), desna strana sa R (engl. ~{\em right}), leva sa L (engl. ~{\em left}), dok se gornja i donja strana označavaju redom sa U (engl. ~{\em up}) i sa D (engl. ~{\em down}) (slika \ref{fig:stranekocke}).\cite{potezi}
 
 \begin{figure}[h!]
         \centering\includegraphics[height=3cm]{images/kocka-strane.png} 
@@ -145,7 +145,7 @@ Analogno ivicama, ćoškovi se obeležavaju sa XYZ, gde su X,Y i Z strane koje t
 
 Nakon obeležavanja ivica i ćoškova stvara se novi problem. Primetimo da oznaka jednog ćoška, na primer URF, može da nam kaže koje strane ga dele, međutim ne može nam reći da li su boje raspoređene na onaj način kakav je potreban da bi se kocka složila. Baš iz tog razloga uveden je pojam \emph{orijentacije} ćoškova, odnosno ivica (slika \ref{fig:cosak-orijentacija-primer}).
 
-Primetimo da, zbog broja strana koje ih dele, ivice mogu imati dve orijentacije, a ćoškovi tri. Te orijentacije obeležene su sa 0 i 1, kada se radi o ivicama, odnosno 0, 1 i 2 kada se radi o ćoškovima. Za orijentaciju 0 uzima se orijentacija ivica i ćoškova složene kocke. 
+Primetimo da, zbog broja strana koje ih dele, ivice mogu imati dve orijentacije, a ćoškovi tri. Te orijentacije obeležene su sa 0 i 1, kada se radi o ivicama, odnosno 0, 1 i 2 kada se radi o ćoškovima. Za orijentaciju 0 uzima se orijentacija ivica i ćoškova složene kocke. \cite{permutacije}
 
 \begin{figure}[h]
         \centering
@@ -176,7 +176,7 @@ Ivica ima 12, pa je broj njihovih permutacija jednak $12! = 479 001 600$. Za sva
     Posmatrajmo šta se dešava kada se jedna strana pomeri za 90 stepeni. Taj potez utiče na 4 ćoška i 4 ivice, i to tako što će svaki od njih zameniti mesta sa jednim susedom, odnosno desiće se 3 razmene ivica i 3 razmene ćoškova (prvi će se zameniti sa drugim, drugi sa trećim i treći sa četvrtim), pa se dobija da se jednim potezom desi 6 razmena, odnosno da je permutacija parna.
 \end{proof}
 
-Koliko pozicija može imati jedna kocka? Iz onoga što smo do sada videli, možemo zaključiti da postoji $12! \cdot 8!$ permutacija, međutim, zbog teoreme 1, znamo da one mogu biti samo parne. Zato je ukupan broj permutacija zapravo jednak $\frac{12! \cdot 8!}{2}$. Za svaku od tih permutacija postoji $2^{11} \cdot 3^{7}$ orijentacija (jer su one određene sa 11 ivica i 7 ćoškova), što znači da jedna kocka može imati $\frac{1}{2} \cdot 12! \cdot 8! \cdot 2^{11} \cdot 3^7 = 43,252,003,274,489,856,000$ različitih pozicija. Red veličine ove vrednosti je $10^{19}$ i to je jedan od glavnih razloga zašto je pronalazak algoritma za rešavanje bio toliki problem.\cite{permutacije}
+Koliko pozicija može imati jedna kocka? Iz onoga što smo do sada videli, možemo zaključiti da postoji $12! \cdot 8!$ permutacija, međutim, zbog teoreme 1, znamo da one mogu biti samo parne. Zato je ukupan broj permutacija zapravo jednak $\frac{12! \cdot 8!}{2}$. Za svaku od tih permutacija postoji $2^{11} \cdot 3^{7}$ orijentacija (jer su one određene sa 11 ivica i 7 ćoškova), što znači da jedna kocka može imati $\frac{1}{2} \cdot 12! \cdot 8! \cdot 2^{11} \cdot 3^7 = 43,252,003,274,489,856,000$ različitih pozicija. Red veličine ove vrednosti je $10^{19}$ i to je jedan od glavnih razloga zašto je pronalazak algoritma za rešavanje bio toliki problem.
 
 
 
