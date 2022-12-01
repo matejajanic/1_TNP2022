@@ -5,19 +5,19 @@
 \usepackage[utf8]{inputenc}
 \usepackage{hyperref}
 \usepackage[flushleft]{threeparttable}
-\definecolor{beamer@darkred}{rgb}{0.85,0.1,0.1}
-\setbeamercolor{structure}{fg=beamer@darkred}
+\definecolor{caribbeangreen}{rgb}{0.0, 0.8, 0.6}
+\setbeamercolor{structure}{fg=caribbeangreen}
 
 \def\d{{\fontencoding{T1}\selectfont\dj}}
 \def\D{{\fontencoding{T1}\selectfont\DJ}}
 
 
 \title{Tehničko i naučno pisanje}
-\subtitle{-- Metodologija stručnih i naučnih izlaganja --}
-\author{dr Jelena Graovac}
+\subtitle{-- Rubikova kocka --}
+\author{ Jovana Brkljač\\ \and Mateja Janić\\ \and Bogdan Pejčić \\ \and Mitar Avramović }
 \institute{Matematički fakultet\\Univerzitet u Beogradu}
 \date{
-	\footnotesize{Beograd, 2020.}	
+	\footnotesize{Beograd, 2022.}	
 }
 
 \begin{document}
@@ -38,12 +38,13 @@
 
 \begin{frame}
 	\frametitle{Pregled} % Table of contents slide, comment this block out to remove it
-	\tableofcontents[hidesubsections] 
+	\tableofcontents[] 
 \end{frame}
+\section{Rubikova kocka}
 
-\section{Metodologija stručnih i naučnih izlaganja}
+\subsection{Istorijat}
 
-\begin{frame}[fragile]\frametitle{Kako ljudi pamte?}
+\begin{frame}[fragile]\frametitle{Istorijat}
 	\begin{itemize}	
 		\item 10\% onoga što pročitaju
 		\item 20\% onoga što čuju
@@ -54,15 +55,42 @@
 	\end{itemize}
 \end{frame}
 
-\subsection{Kako ljudi uče?}
+\subsection{Elementi}
 
-\begin{frame}[fragile]\frametitle{Kako ljudi uče?}
+\begin{frame}[fragile]\frametitle{Elementi}
 	\begin{itemize}	
 		\item Verbalnim putem (čitanjem i slušanjem)
 		\item Vizuelnim putem (gledanjem)
 		\item Aktivnim učešćem (gledanjem, slušanjem i činjenjem)
 	\end{itemize}
 \end{frame}
+
+
+\subsection{Potezi}
+\begin{frame}[fragile]\frametitle{Potezi}
+
+
+
+
+\end{frame}
+
+
+
+\subsection{Permutacije}
+\begin{frame}[fragile]\frametitle{Permutacije}
+
+
+
+
+\end{frame}
+\subsection{Algoritmi}
+\begin{frame}[fragile]\frametitle{Algoritmi}
+
+
+
+
+\end{frame}
+
 
 \section{Zakljucak}
 
