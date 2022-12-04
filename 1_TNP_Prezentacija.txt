@@ -4,9 +4,13 @@
 \usepackage{color}
 \usepackage[utf8]{inputenc}
 \usepackage{hyperref}
+\usepackage{caption}
 \usepackage[flushleft]{threeparttable}
+\usepackage{subfigure}
 \definecolor{caribbeangreen}{rgb}{0.0, 0.8, 0.6}
 \setbeamercolor{structure}{fg=caribbeangreen}
+\captionsetup[figure]{labelformat=empty}
+
 
 \def\d{{\fontencoding{T1}\selectfont\dj}}
 \def\D{{\fontencoding{T1}\selectfont\DJ}}
@@ -14,7 +18,7 @@
 
 \title{Tehničko i naučno pisanje}
 \subtitle{-- Rubikova kocka --}
-\author{ Jovana Brkljač\\ \and Mateja Janić\\ \and Bogdan Pejčić \\ \and Mitar Avramović }
+\author{Jovana Brkljač \and Mateja Janić \and Bogdan Pejčić \and Mitar Avramović}
 \institute{Matematički fakultet\\Univerzitet u Beogradu}
 \date{
 	\footnotesize{Beograd, 2022.}	
@@ -46,31 +50,61 @@
 
 \begin{frame}[fragile]\frametitle{Istorijat}
 	\begin{itemize}	
-		\item 10\% onoga što pročitaju
-		\item 20\% onoga što čuju
-		\item 30\% onoga što vide
-		\item 50\% onoga što čuju i vide
-		\item 70\% onoga što kažu i napišu
-		\item 90\% onoga što rade
+		\item Nastanak kocke
+		\item Pitanje rešavanja 
+       \item Božiji broj
 	\end{itemize}
+ 
+        \begin{figure}[h!]
+        \centering\includegraphics[height=3cm]{Erno-Rubik.jpg} 
+        \caption{\emph{Erne Rubik}}
+        \label{fig:stranekocke}
+\end{figure}
+ 
 \end{frame}
 
 \subsection{Elementi}
 
 \begin{frame}[fragile]\frametitle{Elementi}
 	\begin{itemize}	
-		\item Verbalnim putem (čitanjem i slušanjem)
-		\item Vizuelnim putem (gledanjem)
-		\item Aktivnim učešćem (gledanjem, slušanjem i činjenjem)
+		\item Koji su to delovi Rubikove kocke?
+		\item Podela kockica na tri grupe:
+        
+		\begin{itemize}
+		    \item Centri
+                \item Ivice
+                \item Ćoškovi
+		\end{itemize} 
 	\end{itemize}
+  \begin{figure}[h]
+        \centering
+        \subfigure[centri]{
+            \includegraphics[height=1.5cm]{centri.png}
+            \label{fig:centri}
+        }
+        \subfigure[ivice]{
+            \includegraphics[height=1.5cm]{ivice.png}
+            \label{fig:ivice}
+        }
+        \subfigure[ćoškovi]{
+            \includegraphics[height=1.5cm]{coskovi.png}
+        }
+        \caption{}
+        \label{fig:kockice}
+    \end{figure}
 \end{frame}
 
 
 \subsection{Potezi}
 \begin{frame}[fragile]\frametitle{Potezi}
+\begin{itemize}
+    \item Na koji način se Rubikova kocka može transformisati?
+    \item Način obeležavanja strana
+    \item Način obeležavanja poteza
+    \item HTM i QTM
+\end{itemize}
 
-
-
+\centering\includegraphics[height=2.5cm]{straneKocke.png}
 
 \end{frame}
 
@@ -79,8 +113,12 @@
 \subsection{Permutacije}
 \begin{frame}[fragile]\frametitle{Permutacije}
 
-
-
+\begin{itemize}
+    \item Obeležavanje ivica
+    \item Obeležavanje ćoškova
+    \item Orijentacije
+    \item Koliko različitih pozicija ima Rubikova kocka?
+\end{itemize}
 
 \end{frame}
 \subsection{Algoritmi}
