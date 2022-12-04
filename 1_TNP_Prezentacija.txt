@@ -10,6 +10,7 @@
 \definecolor{caribbeangreen}{rgb}{0.0, 0.8, 0.6}
 \setbeamercolor{structure}{fg=caribbeangreen}
 \captionsetup[figure]{labelformat=empty}
+\captionsetup[table]{labelformat=empty}
 
 
 \def\d{{\fontencoding{T1}\selectfont\dj}}
@@ -18,7 +19,7 @@
 
 \title{Tehničko i naučno pisanje}
 \subtitle{-- Rubikova kocka --}
-\author{Jovana Brkljač \and Mateja Janić \and Bogdan Pejčić \and Mitar Avramović}
+\author{Jovana Brkljač \and Mateja Janić\\ \and Bogdan Pejčić \and Mitar Avramović}
 \institute{Matematički fakultet\\Univerzitet u Beogradu}
 \date{
 	\footnotesize{Beograd, 2022.}	
@@ -34,9 +35,8 @@
 
 \begin{frame}[fragile]\frametitle{Literatura}
 	\begin{itemize}
-		\item Zasnovano na:\\
-		Goran Nenadic, Predrag Janičić, Aleksandar Samardžić: \LaTeX{} za autore, Beograd, Kompjuter biblioteka, 2003.
-		(\url{http://poincare.matf.bg.ac.rs/~janicic//latex2e/})
+		\item Zasnovano na seminarskom radu "Rubikova kocka - Jovana Brkljač, Mateja Janić, Mitar Avramović, Bogdan Pejčić", koji se može naći na sledećem linku:
+		(\url{https://github.com/matejajanic/1_TNP2022/blob/main/1_Brklja%C4%8DJani%C4%87Pej%C4%8Di%C4%87Avramovi%C4%87.pdf})
 	\end{itemize}
 \end{frame}
 
@@ -124,27 +124,63 @@
 \subsection{Algoritmi}
 \begin{frame}[fragile]\frametitle{Algoritmi}
 
+\begin{itemize}
+    \item Glavni algoritmi i ideje za rešavanje:
+    \begin{itemize}
+        \item Tisltvejtov
+        \item Kosiembin
+        \item Korfov
+    \end{itemize}
+    \item Rekordi u sklapanju nekih vrsta Rubikove kocke
+\end{itemize}
 
-
+\begin{figure}[h!]
+        \centering
+        \subfigure{
+            \includegraphics[height=1.5cm]{krst.png}
+        }
+        \subfigure{
+            \includegraphics[height=1.5cm]{prvi-sloj.png} 
+        }
+        \subfigure{
+            \includegraphics[height=1.5cm]{prva-dva-sloja.png}
+        }
+        \subfigure{
+            \includegraphics[height=1.5cm]{krst-gore.png}
+        }
+        \subfigure{
+            \includegraphics[height=1.5cm]{slozena-kocka.png}
+        }
+        \caption{Pojednostavljeni prikaz tzv. početničkog metoda}
+        \label{fig:beginners-method}
+    \end{figure}
 
 \end{frame}
 
+\begin{frame}{Rekordi}
+\begin{table}[h!]
+\begin{center}
+\caption{Svetski rekordi u brzom slaganju različitih kocki:}
+\begin{tabular}{|c|l|} \hline
+\textbf{dimenzija}& \textbf{vreme}\\ \hline
+3x3x3 &3,47s\\ \hline
+2x2x2 &0,49s\\ \hline
+4x4x4 &16,79s\\ \hline
+5x5x5 &33,02s\\ \hline
+piramida &0,91s\\ \hline
+3x3x3 sa povezom &14,51s\\ \hline
+\end{tabular}
+\label{tab:tabela1}
+\end{center}
+\end{table}
+\end{frame}
 
-\section{Zakljucak}
+\section{Zaključak}
 
-\begin{frame}[fragile]\frametitle{Kako ljudi uče?}
-	\begin{itemize}	
-		\item Ljudi ne komuniciraju samo rečima. Prema nekim
-		istraživanjima:
-		\begin{itemize}
-			\item samo 8\% poruke se prenese samim rečima (verbalna komunikacija)
-			\item 37\% se prenesi bojom glasa, tonalitetom, pauzama u govoru (paralingvističkim znakovima)
-			\item 55\% poruke se prenosi govorom tela: pratećim pokretima, izrazom lica i
-			očiju, stavom tela i drugo (neverbalna komunikacija)
-		\end{itemize}
-		\item Verbalnim putem se najčešće prenose činjenice i
-		sirove informacije, dok se neverbalnim putem prenose stavovi i
-		emocionalni odnos prema činjenicama koje izlažemo.
+\begin{frame}[fragile]\frametitle{Zaključak}
+	\begin{itemize}
+	    \item Rubikova kocka je i dalje, posle toliko vremena od svog nastanka, jedna od najzanimljivijih i najprepoznatljivijih igračaka kako za decu, tako i za odrasle.
+        \item Upravo zbog njene popularnosti, danas nastaje sve više većih i komplikovanijih mozgalica, sličnih originalnoj Rubikovoj kocki. Baš zato, a i uz razvoj novih tehnologija, može se očekivati da će i ovi, već skoro savršeni algoritmi za slaganje kocke, biti još bolji i efikasniji
 	\end{itemize}
 \end{frame}
 
